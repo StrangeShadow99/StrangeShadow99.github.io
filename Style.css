@@ -1,0 +1,53 @@
+body{
+    background-color: #303030;
+    font-size: 2rem;
+}
+header{
+    height: 80vh;
+    
+}
+header::before{
+    content: "";
+    background-image:url("Images/Logo268424.png");
+    background-size: cover;
+    position: absolute;
+    opacity: 0.75;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px
+}
+h1{
+    position: relative;
+    color: #86C232;
+    font-size: 10rem;
+    margin-top: 20vh;
+    margin-bottom: 0px;
+}
+#Title, #ArrowDownIndex{
+    font-size: 4rem;
+    margin-top: 0px;
+    color: #F2F4F3;
+}
+a{
+    color: #2E86AB;
+}
+h2{
+    color: #86C232;
+}
+h3{
+    color: #5e6572;
+}
+p{
+    color: #F2F4F3;
+}
+li{
+    color: #F2F4F3;
+}
+#portfolioList{
+    position:absolute;
+    display: inline-block;
+}
+li{
+    display: inline-block;
+}
