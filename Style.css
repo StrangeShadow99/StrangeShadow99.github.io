@@ -1,21 +1,22 @@
 body{
-    background-color: #303030;
+    /*background-color: #303030;*/
     font-size: 2rem;
+    display: block;
 }
-header{
-    height: 80vh;
-    
-}
-header::before{
-    content: "";
-    background-image:url("Images/Logo268424.png");
+body{
+    content: '';
+    display: block;
+    background-image:url("Images/eugenio-pastoral-0gTtEsOBJDo-unsplash.jpg");
     background-size: cover;
     position: absolute;
-    opacity: 0.75;
+    z-index: 0;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px
+}
+header{
+    height: 80vh;
 }
 h1{
     position: relative;
@@ -25,6 +26,7 @@ h1{
     margin-bottom: 0px;
 }
 #Title, #ArrowDownIndex{
+    position: relative;
     font-size: 4rem;
     margin-top: 0px;
     color: #F2F4F3;
@@ -50,4 +52,91 @@ li{
 }
 li{
     display: inline-block;
+}
+form div label{
+    font-size: 2rem;
+}
+#pack {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 300px;
+    width: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+
+#sparkle1 {
+    position: absolute;
+    top: -8%;
+    left: 50%;
+    height: 140px;
+    width: 150px;
+}
+
+#sparkle2 {
+    position: absolute;
+    top: 90%;
+    left: 57%;
+    height: 180px;
+    width: 155px;
+}
+
+#sparkle3 {
+    position: absolute;
+    top: 94%;
+    left: 29%;
+    height: 140px;
+    width: 115px;
+}
+
+#sparkle4 {
+    position: absolute;
+    top: 25%;
+    left: 86%;
+    height: 150px;
+    width: 123px;
+}
+
+#sparkle5 {
+    position: absolute;
+    top: 20%;
+    right: 83%;
+    height: 145px;
+    width: 118px;
+}
+
+#sparkle6 {
+    position: absolute;
+    top: 79%;
+    right: 82%;
+    height: 150px;
+    width: 120px;
+}
+
+#sparkle7 {
+    position: absolute;
+    top: 52%;
+    right: 85%;
+    height: 150px;
+    width: 130px;
+}
+
+#sparkle8 {
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    height: 180px;
+    width: 160px;
+}
+
+#sparkles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 500px;
+    height: 500px;
+    margin-top: -250px;
+    margin-left: -250px;
 }

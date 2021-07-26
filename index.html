@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="Style.css">
+  
   <title>Portfolio</title>
 </head>
 <body>
@@ -67,10 +68,24 @@
   <section>
     <h2>Contact</h2>
     <p>Contact me using the form bellow</p>
-    <form action="">
-      <input id="EmailInput" type="text" placeholder="Email Address">
-      <input id="MessageInput" type="text" placeholder="Message">
-      <input id="SubmitButton" type="submit" placeholder="Submit">
+    <form action="/tacos">
+      <div id="FormName">
+        <label for="NameInput">Name:</label>
+        <input id="NameInput" type="text" placeholder="Name" name="Name" required>
+      </div>  
+    <div id="FormEmail">
+      <label for="EmailInput">Email:</label>
+      <input id="EmailInput" type="email" placeholder="Email Address" name="Email" required>
+    </div>
+      <div id="FormSubject">
+        <label for="SubjectInput">Subject:</label>
+        <input id="SubjectInput" type="text" placeholder="Subject" name="Subject" required>
+      </div>
+      <div id="FormMessage">
+        <label for="MessageInput">Message:</label>
+        <textarea id="MessageInput" rows="5" cols="30" placeholder="Message" name="Message" required></textarea>
+      </div>
+      <button>Submit</button>
     </form>
   </section>
   </main>
