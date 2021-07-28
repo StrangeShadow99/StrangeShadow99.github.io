@@ -93,3 +93,6 @@ input::placeholder,textarea::placeholder{
 label{
     display: none;
 }
+::selection{
+    content: "test";
+}
