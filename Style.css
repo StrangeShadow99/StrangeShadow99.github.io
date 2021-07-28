@@ -1,19 +1,25 @@
+html,body{
+    margin:0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
 body{
     /*background-color: #303030;*/
     font-size: 2rem;
-    display: block;
-}
-body{
     content: '';
     display: block;
     background-image:url("Images/eugenio-pastoral-0gTtEsOBJDo-unsplash.jpg");
     background-size: cover;
     position: absolute;
     z-index: 0;
+
     top: 0px;
     right: 0px;
     bottom: 0px;
-    left: 0px
+    left: 0px;
+   
 }
 header{
     height: 80vh;
@@ -56,87 +62,34 @@ li{
 form div label{
     font-size: 2rem;
 }
-#pack {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 300px;
-    width: 200px;
-    margin-top: -100px;
-    margin-left: -100px;
+.portfolioList{
+    font-size: 0px;
 }
+nav ul{
+    padding: 0;
+    margin: 0;
 
-#sparkle1 {
-    position: absolute;
-    top: -8%;
-    left: 50%;
-    height: 140px;
-    width: 150px;
 }
-
-#sparkle2 {
-    position: absolute;
-    top: 90%;
-    left: 57%;
-    height: 180px;
-    width: 155px;
+.portfolioList a, .portfolioList li{
+    font-size: 0px;
 }
-
-#sparkle3 {
-    position: absolute;
-    top: 94%;
-    left: 29%;
-    height: 140px;
-    width: 115px;
+.portfolioList img{
+    display: block;
+    width: 24vw;
 }
-
-#sparkle4 {
-    position: absolute;
-    top: 25%;
-    left: 86%;
-    height: 150px;
-    width: 123px;
+form{
+    padding-bottom:1vh;
 }
-
-#sparkle5 {
-    position: absolute;
-    top: 20%;
-    right: 83%;
-    height: 145px;
-    width: 118px;
+input, textarea, button{
+    color:#86C232;
+    background: #303030;
+    border:none;
+    font-size: 1.3rem;
+    margin:.2rem;
 }
-
-#sparkle6 {
-    position: absolute;
-    top: 79%;
-    right: 82%;
-    height: 150px;
-    width: 120px;
+input::placeholder,textarea::placeholder{
+    color:#86C232;
 }
-
-#sparkle7 {
-    position: absolute;
-    top: 52%;
-    right: 85%;
-    height: 150px;
-    width: 130px;
-}
-
-#sparkle8 {
-    position: absolute;
-    top: 50%;
-    left: 85%;
-    height: 180px;
-    width: 160px;
-}
-
-#sparkles {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    width: 500px;
-    height: 500px;
-    margin-top: -250px;
-    margin-left: -250px;
+label{
+    display: none;
 }
