@@ -3,23 +3,20 @@ html,body{
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
 }
 body{
     /*background-color: #303030;*/
     font-size: 2rem;
-    content: '';
     display: block;
     background-image:url("Images/eugenio-pastoral-0gTtEsOBJDo-unsplash.jpg");
     background-size: cover;
     position: absolute;
     z-index: 0;
-
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
-   
+   overflow-x: hidden;
 }
 header{
     height: 80vh;
@@ -51,12 +48,10 @@ p{
 }
 li{
     color: #F2F4F3;
+    display: inline-block;
 }
 #portfolioList{
     position:absolute;
-    display: inline-block;
-}
-li{
     display: inline-block;
 }
 form div label{
@@ -68,14 +63,22 @@ form div label{
 nav ul{
     padding: 0;
     margin: 0;
+    width: 100vw;
 
 }
 .portfolioList a, .portfolioList li{
     font-size: 0px;
 }
+.portfolioList li{
+    overflow: hidden;
+}
 .portfolioList img{
     display: block;
-    width: 24vw;
+    width: 25vw;
+    transition: transform .5s ease;
+}
+.portfolioList img:hover{
+    transform: scale(1.5);
 }
 form{
     padding-bottom:1vh;
@@ -92,7 +95,4 @@ input::placeholder,textarea::placeholder{
 }
 label{
     display: none;
-}
-::selection{
-    content: "test";
 }
