@@ -52,6 +52,45 @@ section{
 #aboutUs{
     background-color: #003049;
     color: #EFEFEF;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    max-height: 900px;
+
+}
+#aboutUs #images{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-height: 300px;
+    min-width: 200px;
+}
+#dad{
+    background-image: url(Images/dad.JPG);
+    background-size: cover;
+    width:30vw;
+    height:40vh;
+}
+#adam{
+    background-image: url(Images/adam.jpg);
+    background-size: cover;
+    width:30vw;
+    height:40vh;
+}
+.founder{
+    display: flex;
+    align-items: flex-end;
+    
+}
+.founder p{
+    text-align: center;
+    height: 10%;
+    width:100%;
+    background-color: rgba(0, 0, 0, .5);
+    margin:0%;
+
 }
 input, textarea{
     color: black;
