@@ -130,26 +130,32 @@ input::placeholder,textarea::placeholder{
 label{
     display: none;
 }
-a{
+.animation{
     color: #2E86AB;
     display:inline-block; 
     margin:0;
     text-decoration: none;
     text-transform:uppercase; 
 }
-a:hover{
+.animation:hover{
     color:#86C232;
 }
-a:after{
+.animation:after{
     display:block;
     content: '';
     border-bottom: solid 3px #86C232;  
     transform: scaleX(0);  
     transition: transform 250ms ease-in-out;
 }
-a:hover:after { transform: scaleX(1); }
+.animation:hover:after { transform: scaleX(1); }
 .Arrow a{
     text-decoration: none;
+}
+.noBorderAnimation{
+    transition: ease 0.4s;
+}
+.noBorderAnimation:hover{
+    color:#86C232;
 }
 #socialList{
     margin: 0;
