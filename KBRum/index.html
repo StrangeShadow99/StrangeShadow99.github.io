@@ -4,14 +4,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <script type="text/javascript">
+        function sendEmail() {
+        let name = document.querySelector("#NameInput").value;
+        let email = document.querySelector("#EmailInput").value;
+        let message = document.querySelector("#MessageInput").value;
+        let subject = document.querySelector("#SubjectInput").value;
+    
+        Email.send({
+        SecureToken : "79de3fcb-050b-47eb-9440-ca21229f23aa",
+        To : 'nkaley99@gmail.com',
+        From : "nkaley99@gmail.com",
+        Subject: `${subject}`,
+        Body: `Name: ${name} <br/> Email: ${email} <br/> Message: ${message}`,
+        })
+        .then(function (message) {
+        alert("Mail has been sent successfully")
+        });
+        }
+      </script>
     <title>KBRum</title>
 </head>
 <body>
     <header>
-        
+        <nav></nav>
+        <img src="Images/pexels-chris-f-1283219.jpg">
     </header>
     <body>
-        
+        <section id="title">
+            <h1>K|B Rum</h1>
+            <p>Tradtitional Rumpot</p>
+            <p>For Modern Times</p>
+        </section>
+        <section id="whatIsRumpot">
+            <div>
+                <h2>What is Rumpot?</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum odit placeat numquam nisi? Blanditiis, ducimus corporis. Id ut optio, pariatur vero tenetur ea animi quam quae itaque magni? Possimus, non.
+                Consequuntur eum hic libero in optio modi at, consequatur nisi amet quasi veniam excepturi. Libero possimus expedita enim eos tenetur pariatur nostrum quas ipsa incidunt consequuntur esse, minima tempora earum.
+                Consequatur facilis, accusamus labore ad quos earum laborum a nam consequuntur impedit voluptate officia magni, quaerat commodi deleniti vitae nulla quas eaque consectetur tempore itaque? Quas est aperiam ullam! Ex?
+                Quibusdam atque unde eligendi modi dolor, a exercitationem deserunt facilis neque assumenda nobis, inventore, explicabo omnis non suscipit vel quam officiis rerum tempore obcaecati! Voluptatem, unde sequi! Consequuntur, quis laudantium!
+                Id deserunt nam ex ab aperiam. 
+                </p>
+            </div>
+            
+            <img src="Images/rumpot.png">
+        </section>
+        <section id="aboutUs">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita repudiandae dolorem inventore repellat ratione saepe et ipsam illum earum, necessitatibus corporis quos, quas vero, optio unde iure nisi accusantium modi?
+            Rerum, libero. Quasi fugit inventore nostrum! Provident voluptatibus repellendus quisquam aperiam ut dolor commodi voluptatum veniam eaque itaque hic nulla, necessitatibus reiciendis excepturi alias quos consectetur? Beatae distinctio non ducimus!
+            A vero temporibus alias, molestiae modi neque natus. Esse, sunt? Dolor voluptatibus, accusamus libero omnis incidunt perferendis corrupti, quod at tempora commodi rerum accusantium quam quo, voluptatem sunt. Perspiciatis, nemo.
+            Ratione optio commodi dolorem officia voluptatum veritatis ad perspiciatis corporis? Illum quo eos eius temporibus ea hic sapiente labore officiis dignissimos, aliquam voluptates cupiditate eligendi accusantium ipsam, laudantium, natus quia!
+            Harum debitis asperiores distinctio ipsam suscipit voluptates officia at dolor, dicta consequuntur voluptatem deleniti magni eaque esse, optio repudiandae itaque molestias voluptas quia iste? Mollitia obcaecati repellendus quo ex ipsum?</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form method="POST" class="contactForm">
+                <div id="FormName">
+                  <label for="NameInput">Name:</label>
+                  <input id="NameInput" type="text" placeholder="Name" name="Name" required>
+                </div>  
+                <div id="FormEmail">
+                  <label for="EmailInput">Email:</label>
+                  <input id="EmailInput" type="email" placeholder="Email Address" name="Email" required>
+                </div>
+                <div id="FormSubject">
+                  <label for="SubjectInput">Subject:</label>
+                  <input id="SubjectInput" type="text" placeholder="Subject" name="Subject" required>
+                </div>
+                <div id="FormMessage">
+                  <label for="MessageInput">Message:</label>
+                  <textarea id="MessageInput" rows="2" cols="30" placeholder="Message" name="Message" required></textarea>
+                </div>
+                <input class="btn-2" id="submitButton" type="button" value="Send Email" onclick="sendEmail()" /> 
+              </form>
+        </section>
     </body>
 </body>
 </html>

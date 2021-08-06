@@ -1,0 +1,70 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #EFEFEF;
+    background-image: url(Images/PatternBackground.png);
+}
+header img{
+    width:100vw;
+}
+#title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
+    padding-top: 0;
+    position: relative;
+}
+#title h1, #title p{
+    margin: 0;
+}
+#title h1{
+    font-size: 15vw;
+}
+#title p{
+    font-size: 4vw;
+}
+#title p:nth-last-of-type(2n){
+    border-bottom: #791C1C solid 3px;
+}
+h2{
+    font-size: 3vw;
+}
+p{
+    font-size: 2vw;
+}
+section{
+    padding-top: 10vh;
+    padding: 1vh 5vw;
+}
+#whatIsRumpot{
+    background-color: #791C1C;
+    color: #EFEFEF;
+    display: flex;
+    align-items: center;
+}
+#whatIsRumpot img{
+    width:40vw;
+    height:100%;
+}
+#aboutUs{
+    background-color: #003049;
+    color: #EFEFEF;
+}
+input, textarea{
+    color: black;
+    font-size: 2vw;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+}
+label{
+    display: none;
+}
+#submitButton{
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+}
