@@ -35,13 +35,12 @@ header{
     justify-content:flex-end;
 }
 #moon{
-    
     width: 50vw;
-    max-width: 500px;
+    max-width: 400px;
 }
 section , header{
     padding-left: 2vw;
-    padding-top: 20vh;
+    margin-top: 20vh;
 }
 h1{
     position: relative;
