@@ -5,16 +5,39 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="Style.css">
-  
+  <script src="https://kit.fontawesome.com/590ce5d157.js" crossorigin="anonymous"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script type="text/javascript">
+    function sendEmail() {
+    let name = document.querySelector("#NameInput").value;
+    let email = document.querySelector("#EmailInput").value;
+    let message = document.querySelector("#MessageInput").value;
+    let subject = document.querySelector("#SubjectInput").value;
+
+    Email.send({
+    SecureToken : "79de3fcb-050b-47eb-9440-ca21229f23aa",
+    To : 'nkaley99@gmail.com',
+    From : "nkaley99@gmail.com",
+    Subject: `${subject}`,
+    Body: `Name: ${name} <br/> Email: ${email} <br/> Message: ${message}`,
+    })
+    .then(function (message) {
+    alert("Mail has been sent successfully")
+    });
+    }
+  </script>
   <title>Portfolio</title>
 </head>
 <body>
   <header>
     <h1>Nickolas Kaley</h1>
     <p id="Title">Front End Web Developer</p>
-    
+     
   </header>
   <p class="Arrow" id="ArrowIndex">&#8609;</p>
+  <div id="object">
+    <img id="moon" src="Images/moon.png">
+  </div>
   <main>
     <section>
       <h2>Portfolio</h2>
@@ -26,7 +49,9 @@
           <li>
             <a target="_blank" href="KBRum/index.html">
               <img src="Images/Logo.png">
-              <div class="clickMe"><p>Click Me</p></div>
+              <div class="clickMe">
+                <p>Click Me</p>
+              </div>
             </a>
           </li>
           <li><a target="_blank" href="http://stemucationacademy.com/"><img src="Images/stemucation.png"></a></li>
@@ -34,7 +59,7 @@
           <li><a target="_blank" href=""><img src="Images/testSquare4.png"></a></li>
         </div>
       </ul>
-  </nav>
+    </nav>
   
   <section>
     <h2>About Myself</h2>
@@ -68,16 +93,20 @@
   </section>
   <section>
     <h2>Contact</h2>
+    <ul id="socialList">
+      <li><a target="_BLANK" href="https://www.linkedin.com/in/nickolas-k-90a39b123/"><i class="fab fa-linkedin socialLink"></i></a></li>
+     <li><a target="_BLANK" href="https://github.com/StrangeShadow99"><i class="fab fa-github-square socialLink"></i></a></li>
+   </ul> 
     <p>Contact me using the form bellow</p>
-    <form action="/tacos">
+    <form method="POST" class="contactForm">
       <div id="FormName">
         <label for="NameInput">Name:</label>
         <input id="NameInput" type="text" placeholder="Name" name="Name" required>
       </div>  
-    <div id="FormEmail">
-      <label for="EmailInput">Email:</label>
-      <input id="EmailInput" type="email" placeholder="Email Address" name="Email" required>
-    </div>
+      <div id="FormEmail">
+        <label for="EmailInput">Email:</label>
+        <input id="EmailInput" type="email" placeholder="Email Address" name="Email" required>
+      </div>
       <div id="FormSubject">
         <label for="SubjectInput">Subject:</label>
         <input id="SubjectInput" type="text" placeholder="Subject" name="Subject" required>
@@ -86,9 +115,10 @@
         <label for="MessageInput">Message:</label>
         <textarea id="MessageInput" rows="5" cols="30" placeholder="Message" name="Message" required></textarea>
       </div>
-      <button>Submit</button>
+      <input class="btn-2" id="submitButton" type="button" value="Send Email" onclick="sendEmail()" /> 
     </form>
   </section>
   </main>
 </body>
 </html>
+79de3fcb-050b-47eb-9440-ca21229f23aa

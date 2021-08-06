@@ -1,24 +1,28 @@
-// Initialize and add the map
-function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 38.996081, lng: -84.644628},
-        zoom: 6,
-        mapId: '20ad6a156fe82694',
-        disableDefaultUI: true,
-      });
-      //38.996081, -84.644628
-    // The marker, positioned at Uluru
-    new google.maps.Marker({
-        position: {lat: 38.996081, lng: -84.644628},
-        map,
-        title:"Florence,KY",
-        icon:{
-            url:"Images/mapMarker2.png",
-            scaledSize: new google.maps.Size(70,70)
-        }
-    });
-    google.maps.event.addListener(map, 'mouseover', function(event){
-        this.setOptions({scrollwheel:true});
-      });
-    
-  }
+document.querySelector(".contactForm").addEventListener("submit",submitForm);
+function submitForm(e){
+   
+  e.preventDefault();
+
+  let name = document.querySelector("#NameInput").value;
+  let email = document.querySelector("EmailInput").value;
+  let message = document.querySelector("MessageInput").value;
+  let subject = document.querySelector("SubjectInput").value;
+
+  saveContatInfo(name, email, message, subject);
+
+  document.querySelector(".contactForm").rest();
+
+  sendEmail(name, email, message, subject)
+}
+function sendEmail(name, email, message, subject){
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: 'nkaley99@gmail.com',
+    password: "pbyeiiimsaolzgeb",
+    To: "nkaley99@gmail.com",
+    From: "nkaley99@gmail.com",
+    Subject: $(subject),
+    Body: `Name: ${name} <br/> Email: ${email} <br/> Message: ${message}`,
+
+  }).then((message)=> alert("mail sent successfully"))
+}
