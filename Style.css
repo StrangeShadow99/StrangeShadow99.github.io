@@ -1,3 +1,4 @@
+/* General propertie / background */
 html{
     background-image: url("Images/testBackground.png");
     background-size: cover;
@@ -13,7 +14,10 @@ html{
     to {
         background-position: 100% 0;
     }
-    }
+}
+header{
+    height: 70vh;
+}
 body{
     width: 100%;
     height: 100%;
@@ -27,34 +31,21 @@ body, main, section{
     background-repeat: repeat;
     animation: animatedBackground 20s linear infinite alternate;
 }
-header{
-    height: 70vh;
-}
-#object{
-    display: flex;
-    justify-content:flex-end;
-}
-#moon{
-    width: 50vw;
-    max-width: 400px;
-}
 section , header{
     padding-left: 2vw;
+    
+}
+header{
+    margin-top: 0;
+}
+section{
     margin-top: 20vh;
 }
 h1{
     position: relative;
     color: #86C232;
     font-size: 10rem;
-    margin-top: 20vh;
     margin-bottom: 0px;
-}
-#Title, .Arrow{
-    position: relative;
-    font-size: 4rem;
-    margin: 0px;
-    color: #F2F4F3;
-    margin-left: 3vw;
 }
 a{
     color: #2E86AB;
@@ -72,9 +63,96 @@ li{
     color: #F2F4F3;
     display: inline-block;
 }
-form div label{
-    font-size: 2rem;
+/* Animations */
+.animation{
+    color: #2E86AB;
+    display:inline-block; 
+    margin:0;
+    text-decoration: none;
+    text-transform:uppercase; 
 }
+.animation:hover{
+    color:#86C232;
+}
+.animation:after{
+    display:block;
+    content: '';
+    border-bottom: solid 3px #86C232;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+.animation:hover:after { transform: scaleX(1); }
+.Arrow a{
+    text-decoration: none;
+}
+.noBorderAnimation{
+    transition: ease 0.4s;
+}
+.noBorderAnimation:hover{
+    color:#86C232;
+}
+/* UFO */
+
+
+#testUFO{
+    margin-top: 5vh;
+    display: hidden;
+    overflow:hidden;
+    width:200px;
+    height: auto;
+    animation-name: UFO;
+    position: relative;
+    animation-duration: 5s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    left:-500;
+}
+/* @keyframes UFO {
+    from{
+      left:-500px;
+      top: 0px;
+      display: block;
+    }
+    to{
+        left:100%;
+        top:0px;
+        display: hidden;
+    }
+} */
+/* Header */
+header div{
+    height: 370px;
+}
+#Nick{
+    margin-top: 0;
+}
+#Kaley{
+    margin-top: 0;
+}
+#Title{
+    position: absolute;
+    margin-top: 0;
+}
+#Title, .Arrow{
+    font-size: 4rem;
+    color: #F2F4F3;
+    margin-left: 3vw;
+}
+.Arrow{
+    margin-top: 20vh;
+    position: relative;
+}
+/* Moon */
+#object{
+    display: flex;
+    justify-content:flex-end;
+}
+#moon{
+    width: 50vw;
+    max-width: 400px;
+}
+/* Projects */
 .portfolioList{
     font-size: 0px;
     display: flex;
@@ -115,7 +193,16 @@ nav ul{
     border-radius: 50%;
     display: none;
 }
-
+/* Contact Form */
+#socialList{
+    margin: 0;
+}
+.socialLink{
+    font-size: 4rem;
+}
+form div label{
+    font-size: 2rem;
+}
 form{
     padding-bottom:1vh;
     padding:.5vh
@@ -148,36 +235,4 @@ input::placeholder,textarea::placeholder{
 label{
     display: none;
 }
-.animation{
-    color: #2E86AB;
-    display:inline-block; 
-    margin:0;
-    text-decoration: none;
-    text-transform:uppercase; 
-}
-.animation:hover{
-    color:#86C232;
-}
-.animation:after{
-    display:block;
-    content: '';
-    border-bottom: solid 3px #86C232;  
-    transform: scaleX(0);  
-    transition: transform 250ms ease-in-out;
-}
-.animation:hover:after { transform: scaleX(1); }
-.Arrow a{
-    text-decoration: none;
-}
-.noBorderAnimation{
-    transition: ease 0.4s;
-}
-.noBorderAnimation:hover{
-    color:#86C232;
-}
-#socialList{
-    margin: 0;
-}
-.socialLink{
-    font-size: 4rem;
-}
+

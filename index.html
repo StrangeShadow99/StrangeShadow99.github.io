@@ -7,33 +7,23 @@
   <link rel="stylesheet" href="Style.css">
   <script src="https://kit.fontawesome.com/590ce5d157.js" crossorigin="anonymous"></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script type="text/javascript">
-    function sendEmail() {
-    let name = document.querySelector("#NameInput").value;
-    let email = document.querySelector("#EmailInput").value;
-    let message = document.querySelector("#MessageInput").value;
-    let subject = document.querySelector("#SubjectInput").value;
-
-    Email.send({
-    SecureToken : "79de3fcb-050b-47eb-9440-ca21229f23aa",
-    To : 'nkaley99@gmail.com',
-    From : "nkaley99@gmail.com",
-    Subject: `${subject}`,
-    Body: `Name: ${name} <br/> Email: ${email} <br/> Message: ${message}`,
-    })
-    .then(function (message) {
-    alert("Mail has been sent successfully")
-    });
-    }
-  </script>
+  <script src="index.js"></script>
   <title>Portfolio</title>
+  <script>
+    
+  </script>
 </head>
-<body>
+
+<body onload="typeW()">
+  
   <header>
-    <h1>Nickolas Kaley</h1>
+    <!-- <img id="testUFO" src="Images/testUFO.png"> -->
+    <div>
+      <h1 id="Nick"></h1>
+      <h1 id="Kaley"></h1>
+    </div>  
     <p id="Title">Front End Web Developer</p>
-     
-  </header>
+      </header>
   <p class="Arrow" id="ArrowIndex">&#8609;</p>
   
   <main>
