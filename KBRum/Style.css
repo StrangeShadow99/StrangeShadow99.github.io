@@ -1,3 +1,4 @@
+/* General */
 html, body{
     margin: 0;
     padding: 0;
@@ -9,6 +10,18 @@ html, body{
 header img{
     width:100vw;
 }
+h2{
+    font-size: 3vw;
+}
+p{
+    font-size: 2vw;
+}
+section{
+    padding: 1vh 5vw;
+    width: 100%;
+    color: #EFEFEF;
+}
+/* Title */
 #title{
     display: flex;
     align-items: center;
@@ -16,6 +29,7 @@ header img{
     margin-top: 0;
     padding-top: 0;
     position: relative;
+    color:black;
 }
 #title h1, #title p{
     margin: 0;
@@ -29,99 +43,35 @@ header img{
 #title p:nth-last-of-type(2n){
     border-bottom: #791C1C solid 3px;
 }
-h2{
-    font-size: 3vw;
-}
-p{
-    font-size: 2vw;
-}
-section{
-    padding: 1vh 5vw;
-    width: 100%;
-}
+/* What Is Rumpot */
 #whatIsRumpot{
     background-color: #791C1C;
-    color: #EFEFEF;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 #whatIsRumpot img{
     width:40vw;
     height:100%;
 }
+/* About Us */
 #aboutUs{
     background-color: #003049;
-    width: 100%;
-    height: 500px; 
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-around; 
+    align-items: center; 
+    justify-content: center;
     flex-wrap: wrap;
 }
 #aboutUs div{
     width: 100%;
     flex-basis: 500px;
 }
-#images{
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around; 
-    flex-wrap: wrap;
+#aboutUs img{
+    width:40vw;
+    height: 100%;
 }
-#images .founder{
-    margin: 0;
-    padding: 0;
-    width:auto;
-    height:25vh;
-    flex-basis: 100px;
-}
-.founder img{
-    width: inherit;
-    height: inherit;
-}
-/*
-#aboutUs{
-    background-color: #003049;
-    color: #EFEFEF;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    max-height: 900px;
-
-}
- #aboutUs #images{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    min-height: 300px;
-    min-width: 200px;
-    flex-shrink: 0;
-}
-#images div{
-    width:30vw;
-    height:40vh;
-}
-.founder img{
-    width: inherit;
-    height: inherit;
-}
-
-.founder{
-    display: flex;
-    align-items: flex-end;
-    
-}
-.founder p{
-    position: absolute;
-    text-align: center;
-    background-color: rgba(0, 0, 0, .5);
-    margin:0%;
-    width:30vw
-} */
+/* Form */
 input, textarea{
     color: black;
     font-size: 2vw;
